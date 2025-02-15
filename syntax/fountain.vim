@@ -14,7 +14,7 @@ syn sync minlines=200
 syn match fountainSection1 "^\s*# \(\_[^#]\)" fold transparent contains=ALL
 syn region fountainTitlePage start="\%^\(.*\):" end="^$" contains=fountainBoneyard,fountainNotes
 syn match fountainCharacter "^\(\L\)*$" 
-syn region fountainDialogue matchgroup=fountainCharacter start="^\(\L\)*$" end="^\s*$" contains=fountainCharacter,fountainParenthetical,fountainBoneyard,fountainNotes,fountainEmphasis
+syn region fountainDialogue matchgroup=fountainCharacter start="^\(\L\)*$" end="^\s*$" contains=fountainCharacter,fountainParenthetical,fountainBoneyard,fountainNotes,fountainEmphasis,fountainLineBreak
 syn match fountainParenthetical "^\s*\((.*)\)$" contained contains=fountainBoneyard,fountainNotes
 syn match fountainTransition "^\(\L\)* TO:$" contains=fountainBoneyard,fountainNotes
 syn match fountainTransitionForced "^\s*>\(.*\)" contains=fountainBoneyard,fountainNotes
@@ -24,6 +24,7 @@ syn match fountainItalic "\*[^\*]*\*"
 syn match fountainBold "\*\*[^\*]*\*\*"
 syn match fountainBoldItalic "\*\*\*[^\*]*\*\*\*" 
 syn match fountainPagebreak "^===[=]*$"
+syn match fountainLineBreak "\s{2}$"
 syn region fountainNotes start="\[\[" end="\]\]" contains=xLineContinue
 syn region fountainHeader1 start="^\s*# " end="$" contains=fountainBoneyard,fountainNotes
 syn region fountainHeader2 start="^\s*## " end="$" contains=fountainBoneyard,fountainNotes
