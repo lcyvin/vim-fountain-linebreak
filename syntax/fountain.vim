@@ -24,7 +24,7 @@ syn match fountainItalic "\*[^\*]*\*"
 syn match fountainBold "\*\*[^\*]*\*\*"
 syn match fountainBoldItalic "\*\*\*[^\*]*\*\*\*" 
 syn match fountainPagebreak "^===[=]*$"
-syn match fountainLineBreak "\s{2}$"
+syn match fountainLineBreak "^\s\{2}$"
 syn region fountainNotes start="\[\[" end="\]\]" contains=xLineContinue
 syn region fountainHeader1 start="^\s*# " end="$" contains=fountainBoneyard,fountainNotes
 syn region fountainHeader2 start="^\s*## " end="$" contains=fountainBoneyard,fountainNotes
